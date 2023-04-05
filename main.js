@@ -40,10 +40,10 @@ function refreshView(arr) {
 
     arr.forEach(e => {
         container.innerHTML +=
-        `<div class="row">
+        `<label class="container">${e.name}
             <input class="selection-state" type="checkbox" ${e.state?"checked":""} onchange="handleSelect(this, ${e.id})">
-            <a class="name">${e.name}</a>
-        </div>`
+            <span class="checkmark"></span>
+        </label>`
     });
 }
 
